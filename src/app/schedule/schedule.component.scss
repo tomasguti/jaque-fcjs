@@ -1,0 +1,63 @@
+@import '../../theme.scss';
+
+.page-container {
+  padding: 12px;
+  font-size: 18px;
+}
+
+.spinner-container {
+  height: 50vw;
+}
+
+.cards-container {
+  margin-top: 0px;
+  font-size: 16px;
+}
+
+.form-field-class {
+  margin-bottom: 10px;
+}
+
+.item-container {
+  text-align: left;
+  padding: 5px 0 5px 0;
+  margin: 0 auto 0 auto;
+  position: relative;
+  .mat-card {
+    padding: 13px 8px 8px 8px;
+    background-color: rgb(85, 85, 85);
+  }
+  .schedule-chip {
+    position: absolute;
+    top: 10px;
+    left: -30px;
+    z-index: 999;
+  }
+  .chip-ok {
+    background-image: linear-gradient(to bottom left, mat-color($app-accent), mat-color($app-accent, A700));
+  }
+  .chip-suspended {
+    background-image: linear-gradient(to bottom left, mat-color($app-primary), mat-color($app-primary, A700));
+  }
+  .card-name {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 44px;
+    margin-bottom: 13px;
+  }
+  .card-who {
+    color: rgb(180, 180, 180);
+    font-size: 12px;
+  }
+  .card-time {
+    color: rgb(180, 180, 180);
+    font-size: 12px;
+  }
+  .card-state {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 2px 0 0 0;
+  }
+}

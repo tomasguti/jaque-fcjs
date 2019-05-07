@@ -1,0 +1,120 @@
+@import "~@angular/material/theming";
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+
+$md-custom-primary: (
+  50: #f6e7f0,
+  100: #eac2da,
+  200: #dc9ac1,
+  300: #cd71a8,
+  400: #c35295,
+  500: #b83482,
+  600: #b12f7a,
+  700: #a8276f,
+  800: #a02165,
+  900: #911552,
+  A100: #ffc5e0,
+  A200: #ff92c4,
+  A400: #ff5fa9,
+  A700: #ff469b,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-custom-secondary: (
+  50: #e3ecee,
+  100: #b9cfd4,
+  200: #8aafb7,
+  300: #5b8e9a,
+  400: #377685,
+  500: #145e6f,
+  600: #125667,
+  700: #0e4c5c,
+  800: #0b4252,
+  900: #063140,
+  A100: #76d6ff,
+  A200: #43c7ff,
+  A400: #10b8ff,
+  A700: #00acf6,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+$app-primary: mat-palette($md-custom-primary);
+$app-accent: mat-palette($md-custom-secondary, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$app-warn: mat-palette($mat-red);
+
+$app-progress: mat-palette($mat-yellow);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$app-theme: mat-dark-theme($app-primary, $app-accent, $app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($app-theme);
+
+@mixin md-icon-size($size: 24px) {
+  font-size: $size;
+  height: $size;
+  width: $size;
+}
+
+@mixin md-gradient-toolbar() {
+  background: linear-gradient(to bottom left, mat-color($app-primary), mat-color($app-primary, A700)) !important;
+}
+
+.mat-toolbar {
+  @include md-gradient-toolbar();
+}
+
+.mat-icon {
+  @include md-icon-size(32px);
+}
+
+.warn {
+  color: mat-color($app-warn);
+}
+
+.primary {
+  color: mat-color($app-primary);
+}

@@ -1,0 +1,11 @@
+<mat-toolbar color="primary" class="mat-elevation-z5">
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="full-width">
+    <button *ngIf="showBack()" mat-icon-button (click)="clickBack()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <span class="toolbar-title">{{ title }}</span>
+    <button *ngIf="showInfo()" mat-icon-button (click)="clickInfo()">
+      <mat-icon>info_outline</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
