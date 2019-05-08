@@ -1,7 +1,7 @@
 {
   "name": "com.fcjs.marea",
   "displayName": "Marea Estudiantil",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
   "main": "index.js",
   "author": "Tomás Gutiérrez",
@@ -31,7 +31,6 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
-    "angular-svg-icon": "^7.2.0",
     "cordova-android": "^8.0.0",
     "cordova-plugin-splashscreen": "^5.0.2",
     "core-js": "^2.5.4",

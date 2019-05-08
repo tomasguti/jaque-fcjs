@@ -19,7 +19,7 @@
     <mat-spinner></mat-spinner>
   </div>
   <div class="cards-container" *ngIf="!service.busy && service.currentList.length === 0">
-    <div class="card-who">No hay información disponible para la fecha seleccionada.</div>
+    <div class="card-who">No hay información disponible.</div>
   </div>
   <div class="cards-container" *ngIf="!service.busy">
     <div class="item-container" *ngFor="let schedule of service.currentList | filter: searchText">

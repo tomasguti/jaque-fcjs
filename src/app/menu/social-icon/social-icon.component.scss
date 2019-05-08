@@ -1,16 +1,10 @@
 @import '../../../theme.scss';
 
-.container {
+.social-icon-container {
     margin: 0 8px 16px 8px;
 }
 
-.big-icon {
-    width: 60px;
-    height: 60px;
-    background: mat-color($app-primary, 700);
-}
-
-.svg-icon {
-    width: 40px;
-    height: 34px;
+.social-icon {
+    width: 50px;
+    height: 50px;
 }

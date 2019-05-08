@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-top-bar',
@@ -13,6 +14,7 @@ export class TopBarComponent implements OnInit {
 
   constructor(
     public router: Router,
+    public location: Location
   ) { }
 
   ngOnInit() {
@@ -35,7 +37,7 @@ export class TopBarComponent implements OnInit {
   }
 
   clickBack() {
-    this.router.navigateByUrl('/menu');
+    this.location.back();
   }
 
   clickInfo() {

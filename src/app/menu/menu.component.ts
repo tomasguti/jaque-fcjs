@@ -18,7 +18,7 @@ export class MenuComponent implements OnInit {
   }
 
   clickGuarani() {
-    const url = 'https://servicios.unl.edu.ar/fce/';
+    const url = 'https://servicios.unl.edu.ar/fcjs/';
     this.openExternalLink(url);
   }
 

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import { Observable, of, Subscription, empty } from 'rxjs';
 import { map, catchError, finalize, tap } from 'rxjs/operators';
 import { Schedule } from './schedule';
 
@@ -14,6 +14,8 @@ export class ScheduleService {
 
   private MS_TO_SECONDS = 1 / 1000;
   private SECONDS_IN_A_DAY = 60 * 60 * 24;
+
+  private subscription: Subscription;
 
   constructor(private http: HttpClient) { }
 
@@ -32,7 +34,11 @@ export class ScheduleService {
 
     const url = `https://www.fcjs.unl.edu.ar/aulas/service/webapp.php?callback=callback&act=getTimestamp&timestampDesde=${startDate}&timestampHasta=${endDate}`;
     
-    return this.http.jsonp(url, 'callback').pipe(
+    const call = this.http.jsonp(url, 'callback').pipe(
+      catchError(err => {
+        this.busy = false;
+        return [];
+      }),
       tap(response => {
         const results = [];
         for (let key in response) {
@@ -50,7 +56,9 @@ export class ScheduleService {
         this.busy = false;
         return results;
       })
-    ).subscribe();
+    );
+
+    this.subscription = call.subscribe()
   }
 
 }

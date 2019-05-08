@@ -17,7 +17,7 @@ import { FilterPipe } from './services/filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { MenuIconComponent } from './menu/menu-icon/menu-icon.component';
 import { SocialIconComponent } from './menu/social-icon/social-icon.component';
-import { AngularSvgIconModule } from 'angular-svg-icon';
+import { MAT_DATE_LOCALE } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -38,10 +38,9 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
     BrowserAnimationsModule,
     HttpClientModule,
     HttpClientJsonpModule,
-    FormsModule,
-    AngularSvgIconModule
+    FormsModule
   ],
-  providers: [ScheduleService, MatDatepickerModule],
+  providers: [ScheduleService, MatDatepickerModule, { provide: MAT_DATE_LOCALE, useValue: 'es-ES' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

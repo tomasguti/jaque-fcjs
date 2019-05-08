@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.fcjs.marea" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.fcjs.marea" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Info. Bedelía</name>
     <description>
         Aplicación móvil para consultar horarios y otros links útiles de la Facultad de Ciencias Jurídicas de la Universidad Nacional del Litoral.
