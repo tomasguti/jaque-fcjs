@@ -13,24 +13,26 @@ export class ScheduleService {
   public currentList: Array<Schedule> = [];
 
   private MS_TO_SECONDS = 1 / 1000;
-  private SECONDS_IN_A_DAY = 60 * 60 * 24;
+  private MILLISECONDS_IN_A_DAY = 60 * 60 * 24;
+  private HALF_AN_HOUR_IN_SECONDS = 1800;
 
   private subscription: Subscription;
 
   constructor(private http: HttpClient) { }
 
-  refresh(newDate: Date) {
+  refresh(parameterDate: Date) {
 
     console.log('Refreshing...');
 
     this.busy = true;
 
-    if (!newDate) {
-      newDate = new Date();
-    }
+    let newDate = new Date(parameterDate);
 
-    const startDate = Math.floor(newDate.getTime() * this.MS_TO_SECONDS);
-    const endDate = startDate + this.SECONDS_IN_A_DAY;
+    const startDate = Math.floor(newDate.getTime() * this.MS_TO_SECONDS) - this.HALF_AN_HOUR_IN_SECONDS;
+    // Starting next day
+    newDate.setDate(newDate.getDate() + 1);
+    newDate.setHours(0, 0, 0, 0);
+    const endDate = Math.floor(newDate.getTime() * this.MS_TO_SECONDS);
 
     const url = `https://www.fcjs.unl.edu.ar/aulas/service/webapp.php?callback=callback&act=getTimestamp&timestampDesde=${startDate}&timestampHasta=${endDate}`;
     

@@ -16,14 +16,13 @@ export class ScheduleComponent implements OnInit {
   constructor(public service: ScheduleService) {}
 
   ngOnInit() {
-    this.date = new Date();
-    this.date.setHours(0, 0, 0, 0);
-    this.service.refresh(this.date);
+    const newDate = new Date();
+    this.date = newDate;
+    this.service.refresh(newDate);
   }
 
   datePickerChanged(event: MatDatepickerInputEvent<Date>) {
     const newDate = event.value;
-    console.log(newDate);
     this.date = newDate;
     this.service.refresh(this.date);
   }

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.fcjs.marea" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Info. Bedelía</name>
+<widget id="com.fcjs.marea.estudiantil.info.bedelia" version="1.3.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>INFO BEDELIA</name>
     <description>
-        Aplicación móvil para consultar horarios y otros links útiles de la Facultad de Ciencias Jurídicas de la Universidad Nacional del Litoral.
+        Aplicación mobile para consultar horarios y otros links utiles de la Facultad de Ciencias Juridicas de la Universidad Nacional del Litoral.
     </description>
     <author email="tomasguti@gmail.com" href="https://twitter.com/tomartificial">
-        Tomás Gutiérrez
+        Tomas Gutierrez
     </author>
     <content src="index.html" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
@@ -26,12 +26,12 @@
             xxhdpi  : 144x144 px
             xxxhdpi : 192x192 px
         -->
-        <icon src="res/icon/android/ldpi.png" density="ldpi" />
-        <icon src="res/icon/android/mdpi.png" density="mdpi" />
-        <icon src="res/icon/android/hdpi.png" density="hdpi" />
-        <icon src="res/icon/android/xhdpi.png" density="xhdpi" />
-        <icon src="res/icon/android/xxhdpi.png" density="xxhdpi" />
-        <icon src="res/icon/android/xxxhdpi.png" density="xxxhdpi" />
+        <resource-file src="res/values/colors.xml" target="/app/src/main/res/values/colors.xml" />
+        <icon background="@color/background" density="mdpi" foreground="res/icon/android/mipmap-mdpi/ic_launcher.png" />
+        <icon background="@color/background" density="hdpi" foreground="res/icon/android/mipmap-hdpi/ic_launcher.png" />
+        <icon background="@color/background" density="xhdpi" foreground="res/icon/android/mipmap-xhdpi/ic_launcher.png" />
+        <icon background="@color/background" density="xxhdpi" foreground="res/icon/android/mipmap-xxhdpi/ic_launcher.png" />
+        <icon background="@color/background" density="xxxhdpi" foreground="res/icon/android/mipmap-xxxhdpi/ic_launcher.png" />
         <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi"/>
         <splash src="res/screen/android/splash-port-ldpi.png" density="port-ldpi"/>
         <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi"/>
