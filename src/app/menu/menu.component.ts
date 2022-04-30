@@ -23,7 +23,17 @@ export class MenuComponent implements OnInit {
   }
 
   clickEntornoVirtual() {
-    const url = 'https://entornovirtual.unl.edu.ar/course/index.php?categoryid=14';
+    const url = 'https://evirtual.unl.edu.ar/course/index.php?categoryid=14';
+    this.openExternalLink(url);
+  }
+  
+  clickAulaVirtual() {
+    const url = 'https://servicios.unl.edu.ar/aulavirtual/fcjs/';
+    this.openExternalLink(url);
+  }
+
+  clickMasHerramientas() {
+    const url = 'https://linktr.ee/corrienteuniversitariafcjs';
     this.openExternalLink(url);
   }
 
@@ -33,12 +43,12 @@ export class MenuComponent implements OnInit {
   }
 
   clickFacebook() {
-    const url = 'https://www.facebook.com/mareaestudiantilfcjs/';
+    const url = 'https://www.facebook.com/groups/212315765470203';
     this.openExternalLink(url);
   }
 
   clickInstagram() {
-    const url = 'https://www.instagram.com/mareaestudiantilfcjs/';
+    const url = 'https://www.instagram.com/corrienteuniversitariafcjs/';
     this.openExternalLink(url);
   }
 

@@ -24,7 +24,7 @@
   <div class="cards-container" *ngIf="!service.busy">
     <div class="item-container" *ngFor="let schedule of service.currentList | filter: searchText">
       <mat-chip-list class="schedule-chip">
-        <mat-chip *ngIf="schedule.state" color="accent" class="chip-ok" selected>
+        <mat-chip *ngIf="schedule.state" color="primary" class="chip-ok" selected>
           &nbsp;&nbsp;&nbsp;&nbsp;{{ schedule.start | date: 'HH:mm' }}</mat-chip>
         <mat-chip *ngIf="!schedule.state" color="primary" class="chip-suspended" selected>
           &nbsp;&nbsp;&nbsp;&nbsp;{{ schedule.start | date: 'HH:mm' }}</mat-chip>

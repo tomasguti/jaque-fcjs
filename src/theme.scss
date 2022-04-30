@@ -11,20 +11,20 @@
 // hue.
 
 $md-custom-primary: (
-  50: #f6e7f0,
-  100: #eac2da,
-  200: #dc9ac1,
-  300: #cd71a8,
-  400: #c35295,
-  500: #b83482,
-  600: #b12f7a,
-  700: #a8276f,
-  800: #a02165,
-  900: #911552,
-  A100: #ffc5e0,
-  A200: #ff92c4,
-  A400: #ff5fa9,
-  A700: #ff469b,
+  50: #e5e9f2,
+  100: #bfc9e0,
+  200: #94a5cb,
+  300: #6980b6,
+  400: #4965a6,
+  500: #294a96,
+  600: #24438e,
+  700: #1f3a83,
+  800: #193279,
+  900: #0f2268,
+  A100: #9caeff,
+  A200: #6985ff,
+  A400: #365bff,
+  A700: #1d46ff,
   contrast: (
     50: #000000,
     100: #000000,
@@ -45,20 +45,20 @@ $md-custom-primary: (
 
 /* For use in src/lib/core/theming/_palette.scss */
 $md-custom-secondary: (
-  50: #e3ecee,
-  100: #b9cfd4,
-  200: #8aafb7,
-  300: #5b8e9a,
-  400: #377685,
-  500: #145e6f,
-  600: #125667,
-  700: #0e4c5c,
-  800: #0b4252,
-  900: #063140,
-  A100: #76d6ff,
-  A200: #43c7ff,
-  A400: #10b8ff,
-  A700: #00acf6,
+  50: #fde5ef,
+  100: #f9bfd7,
+  200: #f694bd,
+  300: #f269a3,
+  400: #ef498f,
+  500: #ec297b,
+  600: #ea2473,
+  700: #e71f68,
+  800: #e4195e,
+  900: #df0f4b,
+  A100: #ffffff,
+  A200: #ffd8e2,
+  A400: #ffa5bb,
+  A700: #ff8ba8,
   contrast: (
     50: #000000,
     100: #000000,
@@ -100,7 +100,7 @@ $app-theme: mat-dark-theme($app-primary, $app-accent, $app-warn);
 }
 
 @mixin md-gradient-toolbar() {
-  background: linear-gradient(to bottom left, mat-color($app-primary), mat-color($app-primary, A700)) !important;
+  background: linear-gradient(to bottom left, mat-color($app-primary), mat-color($app-primary, 700)) !important;
 }
 
 .mat-toolbar {

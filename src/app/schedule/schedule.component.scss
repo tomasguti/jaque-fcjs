@@ -34,10 +34,10 @@
     z-index: 999;
   }
   .chip-ok {
-    background-image: linear-gradient(to bottom left, mat-color($app-accent), mat-color($app-accent, A700));
+    background-image: linear-gradient(to bottom left, mat-color($app-primary, 400), mat-color($app-primary));
   }
   .chip-suspended {
-    background-image: linear-gradient(to bottom left, mat-color($app-primary), mat-color($app-primary, A700));
+    background-image: linear-gradient(to bottom left, mat-color($app-accent, 600), mat-color($app-accent, 900));
   }
   .card-name {
     color: white;
